@@ -21,10 +21,11 @@ public class MyHealthIndicator implements HealthIndicator {
             return Health.down().withDetail("Error Code", errorCode).build();
         }
         return Health.up().withDetail("Teste", "OK").build();
+        
     }
 
 	private int check() {
-		return 1;
+		return 0;
 	}
 
 }
