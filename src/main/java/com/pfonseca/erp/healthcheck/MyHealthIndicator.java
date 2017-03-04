@@ -24,7 +24,7 @@ public class MyHealthIndicator implements HealthIndicator {
     }
 
 	private int check() {
-		return 0;
+		return 1;
 	}
 
 }
