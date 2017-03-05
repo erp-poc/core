@@ -40,7 +40,7 @@ public class MetricFilter implements Filter {
 		chain.doFilter(request, response);
 		
 		long completedTime = System.currentTimeMillis() - before;
-		logger.debug(String.format("{method=%s, path=\"%s\", status= %d}  %d ms", servletRequest.getMethod(), servletRequest.getServletPath(), servletResponse.getStatus(), completedTime));
+		logger.info(String.format("{method=%s, path=\"%s\", status= %d}  %d ms", servletRequest.getMethod(), servletRequest.getServletPath(), servletResponse.getStatus(), completedTime));
 	}
 
 }

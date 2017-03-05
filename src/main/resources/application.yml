@@ -10,6 +10,7 @@ management:
 spring:
   boot:
     admin:
-      url:http://localhost:8081
+      url: http://localhost:8081
   application:
     name: Core
+
