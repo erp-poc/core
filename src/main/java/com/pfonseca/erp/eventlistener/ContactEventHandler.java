@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 import com.pfonseca.erp.domain.Contact;
 
 @Component
-@RepositoryEventHandler(Contact.class)
+@RepositoryEventHandler
 public class ContactEventHandler {
 
 	private Logger logger = LoggerFactory.getLogger(ContactEventHandler.class);
