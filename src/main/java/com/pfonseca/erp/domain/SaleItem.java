@@ -21,7 +21,7 @@ public class SaleItem extends Item {
 	private ItemType itemType;
 	
 	@NotNull
-	@Min(0)
+	@Min(1)
 	private Long quantity;
 	
 	@NotNull
