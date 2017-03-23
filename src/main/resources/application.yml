@@ -1,8 +1,11 @@
 server:
   port: 8082
 endpoints:
+  sensitive: true
   health:
     sensitive: true
+  liquibase:
+    enabled: true
 
 management:
   security:
