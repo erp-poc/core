@@ -28,7 +28,7 @@ public class Sale extends DefaultEntity {
 	
 	@Valid
 	@NotEmpty
-	@OneToMany(cascade = CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.ALL, mappedBy="sale")
 	private List<SaleItem> items;
 	
 	@Valid

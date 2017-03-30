@@ -35,3 +35,6 @@ security:
           -----END PUBLIC KEY-----
           
  
+liquibase:
+  enabled: true
+  

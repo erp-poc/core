@@ -5,3 +5,6 @@ databaseChangeLog:
       file: "classpath:db/changelog/migrations/20170319_add_products_table.yaml"
   - include:
       file: "classpath:db/changelog/migrations/20170322_add_services_table.yaml"
+  - include:
+      file: "classpath:db/changelog/migrations/20170329_add_sales_table.yaml"
+      

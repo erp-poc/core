@@ -3,11 +3,13 @@ package com.pfonseca.erp.domain;
 import java.math.BigDecimal;
 import java.time.ZonedDateTime;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -29,6 +31,9 @@ public class Installment extends DefaultEntity {
 	@NotNull
 	@Column(name="INSTALLMENT_VALUE")
 	private BigDecimal value;
+	
+	@ManyToOne(optional=false)
+	private Payment payment;
 
 	public ZonedDateTime getDueDate() {
 		return dueDate;
@@ -52,6 +57,14 @@ public class Installment extends DefaultEntity {
 
 	public void setValue(BigDecimal value) {
 		this.value = value;
+	}
+
+	public Payment getPayment() {
+		return payment;
+	}
+
+	public void setPayment(Payment payment) {
+		this.payment = payment;
 	} 
 	
 	
