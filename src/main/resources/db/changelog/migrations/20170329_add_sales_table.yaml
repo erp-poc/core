@@ -63,3 +63,62 @@ databaseChangeLog:
             sequenceName: SEQ_PAYMENT
             startValue: 1
             
+  - changeSet:
+      id: 3
+      author: pfonseca
+      changes:
+        - createTable:
+            tableName: installment
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: false
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: created
+                  type: timestamp with timezone
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated
+                  type: timestamp with timezone
+                  constraints:
+                    nullable: false
+              - column:
+                  name: due_date
+                  type: timestamp with timezone
+                  constraints:
+                    nullable: false
+              - column:
+                  name: paid
+                  type: boolean
+                  constraints:
+                    nullable: false
+              - column:
+                  name: installment_value
+                  type: numeric(19, 2)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: payment_id
+                  type: int
+                  constraints:
+                    nullable: false
+                    
+  - changeSet:
+      id: 4
+      author: pfonseca
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: payment_id
+            baseTableName: installment
+            constraintName: fk_payment
+            deferrable: true
+            initiallyDeferred: true
+            onDelete: CASCADE
+            referencedColumnNames: id
+            referencedTableName: payment
+            
