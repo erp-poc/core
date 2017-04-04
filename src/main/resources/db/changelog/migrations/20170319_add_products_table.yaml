@@ -80,8 +80,8 @@ databaseChangeLog:
             baseColumnNames: id
             baseTableName: product
             constraintName: fk_product_item
-            deferrable: true
-            initiallyDeferred: true
+            deferrable: false
+            initiallyDeferred: false
             onDelete: CASCADE
             referencedColumnNames: id
             referencedTableName: item

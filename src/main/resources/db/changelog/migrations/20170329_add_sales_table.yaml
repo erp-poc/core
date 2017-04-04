@@ -116,8 +116,8 @@ databaseChangeLog:
             baseColumnNames: payment_id
             baseTableName: installment
             constraintName: fk_payment
-            deferrable: true
-            initiallyDeferred: true
+            deferrable: false
+            initiallyDeferred: false
             onDelete: CASCADE
             referencedColumnNames: id
             referencedTableName: payment
