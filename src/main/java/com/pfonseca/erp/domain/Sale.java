@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -18,7 +19,8 @@ import org.hibernate.validator.constraints.NotEmpty;
 public class Sale extends DefaultEntity {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@SequenceGenerator(name = "SEQ_SALE", sequenceName = "SEQ_SALE", allocationSize = 1)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_SALE")
 	private Long id;
 	
 	@Valid
