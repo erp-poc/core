@@ -7,4 +7,6 @@ databaseChangeLog:
       file: "classpath:db/changelog/migrations/20170322_add_services_table.yaml"
   - include:
       file: "classpath:db/changelog/migrations/20170329_add_sales_table.yaml"
-      
+  - include:
+      file: "classpath:db/changelog/migrations/20170412_add_stock_table.yaml"
+ 

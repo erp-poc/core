@@ -15,16 +15,6 @@ import javax.validation.constraints.NotNull;
 @DiscriminatorValue("PRODUCT")
 public class Product extends Item {
 
-	@NotNull
-	@Min(0)
-	private Long quantity;
-
-	public Long getQuantity() {
-		return quantity;
-	}
-
-	public void setQuantity(Long quantity) {
-		this.quantity = quantity;
-	}
+	
 	
 }

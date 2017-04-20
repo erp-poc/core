@@ -12,34 +12,33 @@ import org.hibernate.validator.constraints.NotEmpty;
 import org.hibernate.validator.constraints.URL;
 
 @Entity
-public class Contact extends DefaultEntity{
+public class Contact extends DefaultEntity {
 
 	@Id
 	@SequenceGenerator(name = "SEQ_CONTACT", sequenceName = "SEQ_CONTACT", allocationSize = 1)
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_CONTACT")
 	private Long id;
-	
+
 	@NotEmpty
-	@Size(max=256)
+	@Size(max = 256)
 	private String name;
-	
-	@Size(max=32)
+
+	@Size(max = 32)
 	private String mobilePhone;
-	
-	@Size(max=32)
+
+	@Size(max = 32)
 	private String phone;
-	
-	@Size(max=256)
+
+	@Size(max = 256)
 	@Email
 	private String email;
-	
-	@Size(max=256)
+
+	@Size(max = 256)
 	@URL
 	private String imageUrl;
-	
-	@Size(max=512)
+
+	@Size(max = 512)
 	private String notes;
-	
 
 	public Long getId() {
 		return id;
@@ -96,6 +95,5 @@ public class Contact extends DefaultEntity{
 	public void setNotes(String notes) {
 		this.notes = notes;
 	}
-	
-	
+
 }
