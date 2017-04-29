@@ -24,35 +24,16 @@ databaseChangeLog:
                   constraints:
                     nullable: false
               - column:
-                  name: comments
-                  type: varchar(512)
+                  name: name
+                  type: varchar(256)
                   constraints:
                     nullable: true
               - column:
-                  name: discount
-                  type: bigint
+                  name: description
+                  type: varchar(512)
                   constraints:
-                    nullable: false
-              - column:
-                  name: interest
-                  type: bigint
-                  constraints:
-                    nullable: false
-              - column:
-                  name: paid
-                  type: boolean
-                  constraints:
-                    nullable: false
-              - column:
-                  name: paid_value
-                  type: numeric(19, 2)
-                  constraints:
-                    nullable: false
-              - column:
-                  name: payment_type
-                  type: varchar(255)
-                  constraints:
-                    nullable: false
+                    nullable: true
+              
             
   - changeSet:
       id: 2
