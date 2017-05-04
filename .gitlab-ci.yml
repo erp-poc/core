@@ -66,7 +66,7 @@ deploy:jdk8:
   # Use stage test here, so the pages job may later pickup the created site.
   stage: test
   script:
-    - 'mvn $MAVEN_CLI_OPTS clean'
+    - 'mvn $MAVEN_CLI_OPTS clean install'
   only:
     - master
   image: maven:3.3.9-jdk-8
