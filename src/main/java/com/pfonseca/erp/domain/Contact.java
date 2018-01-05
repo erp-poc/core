@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
+import javax.persistence.Version;
 import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.Email;
@@ -39,6 +40,9 @@ public class Contact extends DefaultEntity {
 
 	@Size(max = 512)
 	private String notes;
+	
+	@Version
+	private Long version;
 
 	public Long getId() {
 		return id;
@@ -95,5 +99,14 @@ public class Contact extends DefaultEntity {
 	public void setNotes(String notes) {
 		this.notes = notes;
 	}
+
+	public Long getVersion() {
+		return version;
+	}
+
+	public void setVersion(Long version) {
+		this.version = version;
+	}
+
 
 }
