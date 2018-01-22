@@ -14,11 +14,11 @@ management:
 spring:
   boot:
     admin:
-      url: http://localhost:8081
+      url: http://monitor:8081
   application:
     name: Core
   datasource:
-    url: jdbc:postgresql://127.0.0.1:5432/core
+    url: jdbc:postgresql://db:5432/core
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver
